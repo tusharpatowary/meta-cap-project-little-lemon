@@ -1,0 +1,37 @@
+.error-message, .default-message, .loading-message{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+}
+
+
+.error-message{
+    color: red;
+}
+
+.default-message{
+    color: #777;
+}
+
+.loading-message{
+    color: rgb(0,0,255);
+}
+
+.loading-message svg{
+    animation: rotateloading 2s infinite linear;
+}
+
+@keyframes rotateloading {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

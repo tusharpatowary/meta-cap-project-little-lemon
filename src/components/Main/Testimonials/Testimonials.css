@@ -1,0 +1,100 @@
+.testimonials-section{
+    display: grid;
+    grid-template-columns: repeat(4, [col-start] 1fr);
+    gap: 20px;
+    padding: 0 50px;
+    
+}
+
+.testimonials-section h2, .testimonials-section .testimonials{
+    grid-column: col-start 1 / span 4; 
+}
+
+.testimonials-section{
+    background-color: var(--section-bg2);
+    margin: 50px 0;
+    padding: 50px 50px;
+    font-size: 16px;
+}
+
+.testimonials-section p{
+    font-size: 16px;
+}
+
+.testimonials .testimonial{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.testimonials img{
+    object-fit: contain;
+    height: 300px;
+    border: 1px solid #aaa;
+    box-shadow: 2px 2px 2px rgb(0,0,0,0.15);
+    border-radius: 10px;
+    align-self: center;
+}
+
+.testimonials .profile{
+    text-align: right;
+    font-weight: bold;
+}
+
+.testimonials p{
+    margin: 0;
+}
+
+.testimonials-section .testimonials{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+    gap: 20px;
+}
+
+.testimonial svg{
+    color: #F4CE14;
+}
+
+.testimonial .rating{
+    align-self: center;
+    text-align: center;
+}
+
+
+@media (min-width: 700px) {
+    .testimonials-section{
+        display: grid;
+        grid-template-columns: repeat(8, [col-start] 1fr);
+        gap: 20px;
+        padding: 0 50px;
+    }
+    
+    .testimonials-section h2, .testimonials-section .testimonials{
+        grid-column: col-start 1 / span 8;
+    }
+    
+    .testimonials-section{
+        padding: 50px 50px;
+    }
+
+}
+
+@media (min-width: 1280px) {
+    .testimonials-section{
+        display: grid;
+        grid-template-columns: repeat(12, [col-start] 1fr);
+        gap: 20px;
+        padding: 0 50px;
+    }
+    
+    .testimonials-section h2, .testimonials-section .testimonials{
+        grid-column: col-start 2 / span 10;
+    }
+    
+    .testimonials-section{
+        padding: 50px 50px;
+    }
+}

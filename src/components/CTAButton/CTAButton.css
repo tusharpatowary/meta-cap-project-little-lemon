@@ -1,0 +1,31 @@
+.cta-button{
+    background-color: #F4CE14;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    height: 48px;
+    padding: 0 10px;
+    font-weight: bold;
+    white-space: nowrap;
+    cursor: pointer;
+    pointer-events: all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.15s;
+}
+
+.cta-button:disabled{
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.cta-button:focus{
+    border: 2px solid black;
+}
+
+.cta-button:hover:not(:disabled){
+    filter: brightness(80%);
+    transform: scale(1.05);
+}

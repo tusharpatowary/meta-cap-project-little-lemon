@@ -1,0 +1,311 @@
+.reserve-container{
+    margin: 0 50px;
+    
+    display: grid;
+    grid-template-columns: repeat(4, [col-start] 1fr);
+    gap: 20px;
+    min-height: calc(100vh - 350px);
+}
+
+.reserve-step{
+    grid-column: col-start 1 / span 4;
+    display: block;
+    width: 100%;
+    place-self: center;
+}
+
+
+.reserve-step h3{
+    color: #495E57;
+}
+
+
+.form-box{
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    min-height: 416px;
+}
+
+.form-box label{
+    font-weight: bold;
+    color: #495E57;
+}
+
+.form-box .input{
+    height: 30px;
+    font-size: 16px;
+    border: 1px solid #777;
+    border-radius: 5px;
+    padding-left: 10px;
+    color: #495E57;
+    outline: none;
+}
+
+.form-box .input:not(.input-error):focus{
+    border: 2px solid black;
+}
+
+.form-box .input.input-error:focus{
+    border: 2px solid red;
+}
+
+.form-box .input.input-error{
+    border: 1px solid red;
+}
+
+
+.restaurant-form-box{
+    box-sizing: border-box;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    min-height: 416px;
+}
+
+.summary-list{
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    min-height: 416px;
+
+}
+
+.summary-item{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.confirmation-message{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: right;
+    margin-top: 5px;
+}
+
+.reserve-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.reserve-form .row, .reserve-confirmation .row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: bold;
+    color: #495E57;
+}
+
+.reserve-form .step{
+    font-weight: bold;
+    color: #495E57;
+}
+
+
+.reserve-form .input-group{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.submit-container-right
+{
+   width: 100%;
+   display: flex;
+   justify-content: flex-end;
+   margin-top: 20px;
+}
+
+.submit-container
+{   
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+
+.reserve-form .submit-button-group
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #f4ce14;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.reserve-form .submit-button-group svg
+{
+    display: flex;
+}
+
+.reserve-form .submit-button{
+    background-color: transparent;
+    border: none;
+}
+
+.restaurant-plan{
+    position: relative;
+    max-height: 416px;
+    max-width: 416px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.restaurant-plan .plan{
+    height: auto;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.restaurant-plan .table
+{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.restaurant-plan .table label
+{
+    pointer-events: none;
+}
+
+
+
+.restaurant-plan .chair{
+    height: auto;
+    object-fit: cover;
+    width: fit-content;
+}
+
+
+.restaurant-plan .chair_number
+{
+    position: absolute;
+}
+
+.booking-confirmation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    text-align: center;
+    gap: 30px;
+    min-height: calc(100vh - 350px);
+}
+
+.booking-confirmation svg{
+    color: rgb(0, 146, 0);
+}
+
+
+.booking-confirmation a.link{
+    padding: 5px;
+    border-radius: 5px;
+    width: fit-content;
+}
+
+.booking-confirmation a.link:hover{
+    width: fit-content;
+    background-color: #495E57;
+    color: white;
+}
+
+.table-legend{
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.legend-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    
+}
+
+.legend-list > li{
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-left: 0;
+    padding: 0; 
+}
+
+.legend-list > li img{
+    width: 36px;
+}
+
+
+@media (min-width: 700px) {
+
+    .reserve-container{
+        display: grid;
+        grid-template-columns: repeat(8, [col-start] 1fr);
+    }
+    
+    .legend-list{
+        flex-direction: row;
+        
+    }
+
+    .reserve-step{
+        grid-column: col-start 2 / span 6;
+        display: block;
+        width: 100%;
+        place-self: center;
+    }
+
+    .submit-container
+    {   
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1280px) {
+
+    .reserve-container{
+        display: grid;
+        grid-template-columns: repeat(12, [col-start] 1fr);
+    }
+    
+    .reserve-step{
+        grid-column: col-start 4 / span 6;
+        display: block;
+        width: 100%;
+        place-self: center;
+    }
+
+}
+
